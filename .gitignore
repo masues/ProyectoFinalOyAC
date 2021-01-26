@@ -1,0 +1,10 @@
+# Archivos del proyecto
+*.qpf
+*.qsf
+*.qws
+# Archivos de compilación
+*/db/*
+*/incremental_db/*
+*/output_files/*
+*/simulation/*
+*.bak

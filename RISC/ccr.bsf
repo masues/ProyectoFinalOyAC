@@ -1,0 +1,114 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 176 160)
+	(text "ccr" (rect 5 0 17 12)(font "Arial" ))
+	(text "inst" (rect 8 128 20 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "selflags[3..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "selflags[3..0]" (rect 21 27 70 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "nupa" (rect 0 0 18 12)(font "Arial" ))
+		(text "nupa" (rect 21 43 39 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "zupa" (rect 0 0 17 12)(font "Arial" ))
+		(text "zupa" (rect 21 59 38 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "vupa" (rect 0 0 20 12)(font "Arial" ))
+		(text "vupa" (rect 21 75 41 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "cupa" (rect 0 0 18 12)(font "Arial" ))
+		(text "cupa" (rect 21 91 39 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "hupa" (rect 0 0 18 12)(font "Arial" ))
+		(text "hupa" (rect 21 107 39 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "n" (rect 0 0 4 12)(font "Arial" ))
+		(text "n" (rect 135 27 139 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 1))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "z" (rect 0 0 3 12)(font "Arial" ))
+		(text "z" (rect 136 43 139 55)(font "Arial" ))
+		(line (pt 160 48)(pt 144 48)(line_width 1))
+	)
+	(port
+		(pt 160 64)
+		(output)
+		(text "v" (rect 0 0 5 12)(font "Arial" ))
+		(text "v" (rect 134 59 139 71)(font "Arial" ))
+		(line (pt 160 64)(pt 144 64)(line_width 1))
+	)
+	(port
+		(pt 160 80)
+		(output)
+		(text "c" (rect 0 0 4 12)(font "Arial" ))
+		(text "c" (rect 135 75 139 87)(font "Arial" ))
+		(line (pt 160 80)(pt 144 80)(line_width 1))
+	)
+	(port
+		(pt 160 96)
+		(output)
+		(text "h" (rect 0 0 4 12)(font "Arial" ))
+		(text "h" (rect 135 91 139 103)(font "Arial" ))
+		(line (pt 160 96)(pt 144 96)(line_width 1))
+	)
+	(port
+		(pt 160 112)
+		(output)
+		(text "i" (rect 0 0 1 12)(font "Arial" ))
+		(text "i" (rect 138 107 139 119)(font "Arial" ))
+		(line (pt 160 112)(pt 144 112)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 128)(line_width 1))
+	)
+)
