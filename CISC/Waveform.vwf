@@ -1,13 +1,13 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off m68hc11 -c m68hc11 --vector_source="C:/OyAC/Laboratorio/EquipoDinamita/Practica07/Waveform.vwf" --testbench_file="C:/OyAC/Laboratorio/EquipoDinamita/Practica07/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off m68hc11 -c m68hc11 --vector_source="C:/OyAC/Laboratorio/EquipoDinamita/Practica07/Waveform.vwf" --testbench_file="C:/OyAC/Laboratorio/EquipoDinamita/Practica07/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/OyAC/Laboratorio/EquipoDinamita/Practica07/simulation/qsim/" m68hc11 -c m68hc11</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/OyAC/Laboratorio/EquipoDinamita/Practica07/simulation/qsim/" m68hc11 -c m68hc11</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off m68hc11 -c m68hc11 --vector_source="D:/Documents/Facultad/OrgYArq/ProyectoFinal/ProyectoFinalOyAC/CISC/Waveform.vwf" --testbench_file="D:/Documents/Facultad/OrgYArq/ProyectoFinal/ProyectoFinalOyAC/CISC/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off m68hc11 -c m68hc11 --vector_source="D:/Documents/Facultad/OrgYArq/ProyectoFinal/ProyectoFinalOyAC/CISC/Waveform.vwf" --testbench_file="D:/Documents/Facultad/OrgYArq/ProyectoFinal/ProyectoFinalOyAC/CISC/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Documents/Facultad/OrgYArq/ProyectoFinal/ProyectoFinalOyAC/CISC/simulation/qsim/" m68hc11 -c m68hc11</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="D:/Documents/Facultad/OrgYArq/ProyectoFinal/ProyectoFinalOyAC/CISC/simulation/qsim/" m68hc11 -c m68hc11</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work m68hc11.vho
 vcom -work work Waveform.vwf.vht
-vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.m68hc11_vhd_vec_tst
+vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.m68hc11_vhd_vec_tst
 vcd file -direction m68hc11.msim.vcd
 vcd add -internal m68hc11_vhd_vec_tst/*
 vcd add -internal m68hc11_vhd_vec_tst/i1/*
@@ -25,7 +25,7 @@ quit -f
 vlib work
 vcom -work work m68hc11.vho
 vcom -work work Waveform.vwf.vht
-vsim -c -t 1ps -sdfmax m68hc11_vhd_vec_tst/i1=m68hc11_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.m68hc11_vhd_vec_tst
+vsim -novopt -c -t 1ps -sdfmax m68hc11_vhd_vec_tst/i1=m68hc11_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.m68hc11_vhd_vec_tst
 vcd file -direction m68hc11.msim.vcd
 vcd add -internal m68hc11_vhd_vec_tst/*
 vcd add -internal m68hc11_vhd_vec_tst/i1/*
@@ -48,7 +48,7 @@ the Block Editor! File corruption is VERY likely to occur.
 */
 
 /*
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2019  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
