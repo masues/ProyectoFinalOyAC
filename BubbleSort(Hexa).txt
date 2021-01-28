@@ -12,7 +12,7 @@ longitudArreglo     EQU#$0004
 	revisaFinCicloInterno: (0009)
 0009  	  LDAA(EXT:B6) 0111; ACCA <- contadorInterno
 000C  	  CMPAM1(IMM:34) 04; (ACCA) - (longitudArreglo) - 1, o bien, (contadorInterno) - (longitudArreglo) - 1
-000E  	  BEQ(REL:27) 12	incrementaContadorExterno; Salta si contadorInterno = nMenosUno
+000E  	  BEQ(REL:27) 0C	incrementaContadorExterno; Salta si contadorInterno = nMenosUno
 	cicloInterno: (0010)
 0010	  LDAA(INX:A6) $00,X; ACCA <- (IX)
 0012	  CMPA(INX:A1) $01,X; (ACCA) - (IX+1), o bien (IX) - (IX+1)
@@ -21,17 +21,17 @@ longitudArreglo     EQU#$0004
 0016	  SWIX(INH:31); (IX) <-> (IX+1), es decir, intercambia dos registros de la memoria
 	incrementaIndice: (0017)
 0017	  INCLX(EXT:33) 0111; IX <- IX + 1, contadorInterno <- (contadorInterno) + 1
-0020	  BRA(REL:20) E7 revisaFinCicloInterno
-	incrementaContadorExterno: (0022)
-0022	  INC(EXT:7C) 0110; contadorExterno <- (contadorExterno) + 1
-0025	  LDAA(EXT:B6) 0110; ACCA <- (contadorExterno)
-0028	  CMPAM1(IMM:34) 04; (ACCA) - (longitudArreglo) - 1, o bien, (contadorInterno) - (longitudArreglo) - 1
-002A	  BLO(REL:25) D7	cicloExterno; Si (contadorExterno) < longitudArreglo - 1, salta a cicloExterno
+001A	  BRA(REL:20) ED revisaFinCicloInterno
+	incrementaContadorExterno: (001C)
+001C	  INC(EXT:7C) 0110; contadorExterno <- (contadorExterno) + 1
+001F	  LDAA(EXT:B6) 0110; ACCA <- (contadorExterno)
+0022	  CMPAM1(IMM:34) 04; (ACCA) - (longitudArreglo) - 1, o bien, (contadorInterno) - (longitudArreglo) - 1
+0024	  BLO(REL:25) DD	cicloExterno; Si (contadorExterno) < longitudArreglo - 1, salta a cicloExterno
   	;En caso contrario, se ha terminado el ordenamiento, resta imprimir el arreglo
-002C	  LDX(IMM:CE) 0100; IX <- dirInicio
-002F	  LDAB(INX:E6) $00,X; ACCB <- (IX)
-0031	  LDAB(INX:E6) $01,X; ACCB <- (IX+1)
-0033	  LDAB(INX:E6) $02,X; ACCB <- (IX+2)
-0035	  LDAB(INX:E6) $03,X; ACCB <- (IX+3)
-0037	  JMP(EXT:7E) 0000
+0026	  LDX(IMM:CE) 0100; IX <- dirInicio
+0029	  LDAB(INX:E6) $00,X; ACCB <- (IX)
+002B	  LDAB(INX:E6) $01,X; ACCB <- (IX+1)
+002D	  LDAB(INX:E6) $02,X; ACCB <- (IX+2)
+002F	  LDAB(INX:E6) $03,X; ACCB <- (IX+3)
+0031	  JMP(EXT:7E) 0000
 	  END
