@@ -13,7 +13,8 @@ entity ccr is
 			  v : out STD_LOGIC;
 			  c : out STD_LOGIC;
 			  h : out STD_LOGIC;
-			  i : out STD_LOGIC
+				i : out STD_LOGIC;
+				clk : in STD_LOGIC
 			  );
 end ccr;
 
@@ -26,60 +27,62 @@ signal hi : std_logic := '0';
 signal ii : std_logic := '0';
 
 begin
-	process (selflags, nupa,zupa,vupa,cupa,hupa, ni, zi, vi, ci, hi, ii)
-	begin		
-		if selflags = "0000" then
-			ni <= ni;
-			zi <= zi;
-			vi <= vi;
-			ci <= ci;
-			hi <= hi;
-			ii <= ii;
-		elsif selflags = "0001" then
-			ni <= nupa;
-			zi <= zupa;
-			vi <= '0';
-		elsif selflags = "0010" then
-			ni <= nupa;
-			zi <= zupa;
-			vi <= vupa;
-			ci <= cupa;
-			hi <= hupa;
-		elsif selflags = "0011" then
-			ni <= nupa;
-			zi <= zupa;
-			vi <= vupa;
-			ci <= cupa;
-		elsif selflags = "0100" then
-			zi <= zupa;
-		elsif selflags = "0101" then
-			ci <= '0';
-		elsif selflags = "0110" then
-			ii <= '0';
-		elsif selflags = "0111" then
-			vi <= '0';
-		elsif selflags = "1000" then
-			ci <= '1';
-		elsif selflags = "1001" then
-			ii <= '1';
-		elsif selflags = "1010" then
-			vi <= '1';
-		elsif selflags = "1011" then
-			ni <= nupa;
-			zi <= zupa;
-			vi <= '0';
-			ci <= '1';
-		elsif selflags = "1100" then
-			ni <= nupa;
-			zi <= zupa;
-			vi <= vupa;
-		else 
-			ni <= ni;
-			zi <= zi;
-			vi <= vi;
-			ci <= ci;
-			hi <= hi;
-			ii <= ii;
+	process (clk, selflags, nupa,zupa,vupa,cupa,hupa, ni, zi, vi, ci, hi, ii)
+	begin
+		if falling_edge(clk) then
+			if selflags = "0000" then
+				ni <= ni;
+				zi <= zi;
+				vi <= vi;
+				ci <= ci;
+				hi <= hi;
+				ii <= ii;
+			elsif selflags = "0001" then
+				ni <= nupa;
+				zi <= zupa;
+				vi <= '0';
+			elsif selflags = "0010" then
+				ni <= nupa;
+				zi <= zupa;
+				vi <= vupa;
+				ci <= cupa;
+				hi <= hupa;
+			elsif selflags = "0011" then
+				ni <= nupa;
+				zi <= zupa;
+				vi <= vupa;
+				ci <= cupa;
+			elsif selflags = "0100" then
+				zi <= zupa;
+			elsif selflags = "0101" then
+				ci <= '0';
+			elsif selflags = "0110" then
+				ii <= '0';
+			elsif selflags = "0111" then
+				vi <= '0';
+			elsif selflags = "1000" then
+				ci <= '1';
+			elsif selflags = "1001" then
+				ii <= '1';
+			elsif selflags = "1010" then
+				vi <= '1';
+			elsif selflags = "1011" then
+				ni <= nupa;
+				zi <= zupa;
+				vi <= '0';
+				ci <= '1';
+			elsif selflags = "1100" then
+				ni <= nupa;
+				zi <= zupa;
+				vi <= vupa;
+			else 
+				ni <= ni;
+				zi <= zi;
+				vi <= vi;
+				ci <= ci;
+				hi <= hi;
+				ii <= ii;
+			end if;
 		end if;
 	end process;
 	
