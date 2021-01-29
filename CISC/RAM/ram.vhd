@@ -17,7 +17,9 @@ architecture Behavioral of ram is
 	signal mem : memory;
 	
 	attribute ram_init_file : string;
-	attribute ram_init_file of mem : signal is "mem_content.mif";
+	--attribute ram_init_file of mem : signal is "mem_content.mif";
+	--attribute ram_init_file of mem : signal is "mem_content_SWIX_CMPAM1.mif";	
+	attribute ram_init_file of mem : signal is "mem_content_CISC.mif";
 	
 	begin
 	
