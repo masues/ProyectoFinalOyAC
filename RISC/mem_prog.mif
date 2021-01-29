@@ -1,4 +1,4 @@
--- Copyright (C) 2020  Intel Corporation. All rights reserved.
+-- Copyright (C) 2019  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
 -- and other software and tools, and any partner logic 
 -- functions, and any output files from any of the foregoing 
@@ -22,9 +22,40 @@ ADDRESS_RADIX=HEX;
 DATA_RADIX=HEX;
 
 CONTENT BEGIN
-	00  :   00C60002;
-	01  :   00860000;
-	02  :   001B0000;
-	03  :   007E0002;
-	[04..31]  :   00000000;
+	00  :   007F0010;
+	01  :   00CE0000;
+	02  :   007F0011;
+	[03..04]  :   00000000;
+	05  :   00B60011;
+	[06..07]  :   00000000;
+	08  :   00810003;
+	09  :   00270015;
+	[0A..0C]  :   00000000;
+	0D  :   00A60000;
+	[0E..0F]  :   00000000;
+	10  :   00A10001;
+	11  :   00230007;
+	[12..14]  :   00000000;
+	15  :   00E60000;
+	16  :   00A60001;
+	17  :   00A70000;
+	18  :   00E70001;
+	19  :   00800000;
+	1A  :   007C0011;
+	1B  :   002000E7;
+	[1C..1E]  :   00000000;
+	1F  :   007C0010;
+	20  :   00B60010;
+	[21..22]  :   00000000;
+	23  :   00810001;
+	24  :   002300DC;
+	[25..27]  :   00000000;
+	28  :   00CE0000;
+	[29..2A]  :   00000000;
+	2B  :   00E60000;
+	2C  :   00E60001;
+	2D  :   00E60002;
+	2E  :   00E60003;
+	2F  :   007E0000;
+	[30..31]  :   00000000;
 END;
