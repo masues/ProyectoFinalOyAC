@@ -16,6 +16,9 @@ end memoria_datos;
 architecture Behavioral of memoria_datos is
    type memory is array(0 to 50) of std_logic_vector(15 downto 0);
 	signal mem : memory;
+
+	attribute ram_init_file : string;
+	attribute ram_init_file of mem : signal is "mem_data.mif";
 		
 	begin
 	
