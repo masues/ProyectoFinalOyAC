@@ -12,11 +12,11 @@ end memoria_inst;
 
 architecture Behavioral of memoria_inst is
    	
-	type memory is array(0 to 50) of std_logic_vector(31 downto 0);
+	type memory is array(0 to 100) of std_logic_vector(31 downto 0);
 	signal mem : memory;
 	
 	attribute ram_init_file : string;
-   attribute ram_init_file of mem : signal is "mem_prog.mif";
+   attribute ram_init_file of mem : signal is "mem_prog2.mif";
 	
 	
 	begin

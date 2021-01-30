@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2019  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -233,6 +233,38 @@ https://fpgasoftware.intel.com/eula.
 	(rect 4800 2200 4976 2216)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "i" (rect 90 0 92 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 600 1384 776 1400)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "instr[31..0]" (rect 90 0 143 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 264 1200 440 1216)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "PC[15..0]" (rect 90 0 137 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -2227,42 +2259,42 @@ https://fpgasoftware.intel.com/eula.
 		(pt 160 32)
 		(output)
 		(text "n" (rect 0 0 5 12)(font "Arial" ))
-		(text "n" (rect 135 27 139 39)(font "Arial" ))
+		(text "n" (rect 135 27 140 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32))
 	)
 	(port
 		(pt 160 48)
 		(output)
 		(text "z" (rect 0 0 4 12)(font "Arial" ))
-		(text "z" (rect 136 43 139 55)(font "Arial" ))
+		(text "z" (rect 136 43 140 55)(font "Arial" ))
 		(line (pt 160 48)(pt 144 48))
 	)
 	(port
 		(pt 160 64)
 		(output)
 		(text "v" (rect 0 0 7 12)(font "Arial" ))
-		(text "v" (rect 134 59 139 71)(font "Arial" ))
+		(text "v" (rect 134 59 141 71)(font "Arial" ))
 		(line (pt 160 64)(pt 144 64))
 	)
 	(port
 		(pt 160 80)
 		(output)
 		(text "c" (rect 0 0 5 12)(font "Arial" ))
-		(text "c" (rect 135 75 139 87)(font "Arial" ))
+		(text "c" (rect 135 75 140 87)(font "Arial" ))
 		(line (pt 160 80)(pt 144 80))
 	)
 	(port
 		(pt 160 96)
 		(output)
 		(text "h" (rect 0 0 5 12)(font "Arial" ))
-		(text "h" (rect 135 91 139 103)(font "Arial" ))
+		(text "h" (rect 135 91 140 103)(font "Arial" ))
 		(line (pt 160 96)(pt 144 96))
 	)
 	(port
 		(pt 160 112)
 		(output)
 		(text "i" (rect 0 0 2 12)(font "Arial" ))
-		(text "i" (rect 138 107 139 119)(font "Arial" ))
+		(text "i" (rect 138 107 140 119)(font "Arial" ))
 		(line (pt 160 112)(pt 144 112))
 	)
 	(drawing
@@ -2910,11 +2942,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 4552 1488)
 )
 (connector
-	(pt 120 1280)
-	(pt 120 1128)
-	(bus)
-)
-(connector
 	(pt 360 1128)
 	(pt 336 1128)
 	(bus)
@@ -3012,22 +3039,12 @@ https://fpgasoftware.intel.com/eula.
 	(pt 520 1088)
 )
 (connector
-	(pt 360 1104)
-	(pt 520 1104)
-	(bus)
-)
-(connector
 	(pt 488 1248)
 	(pt 520 1248)
 )
 (connector
 	(pt 472 1264)
 	(pt 520 1264)
-)
-(connector
-	(pt 384 1280)
-	(pt 520 1280)
-	(bus)
 )
 (connector
 	(pt -168 1280)
@@ -4000,6 +4017,46 @@ https://fpgasoftware.intel.com/eula.
 	(pt 4016 760)
 	(pt 4016 1600)
 )
+(connector
+	(pt 600 1392)
+	(pt 448 1392)
+	(bus)
+)
+(connector
+	(pt 448 1392)
+	(pt 448 1280)
+	(bus)
+)
+(connector
+	(pt 384 1280)
+	(pt 448 1280)
+	(bus)
+)
+(connector
+	(pt 448 1280)
+	(pt 520 1280)
+	(bus)
+)
+(connector
+	(pt 360 1104)
+	(pt 520 1104)
+	(bus)
+)
+(connector
+	(pt 120 1208)
+	(pt 264 1208)
+	(bus)
+)
+(connector
+	(pt 120 1280)
+	(pt 120 1208)
+	(bus)
+)
+(connector
+	(pt 120 1208)
+	(pt 120 1128)
+	(bus)
+)
 (junction (pt 1528 1208))
 (junction (pt 1528 1416))
 (junction (pt 2336 1056))
@@ -4055,6 +4112,8 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 3008 1608))
 (junction (pt 1136 1496))
 (junction (pt 4016 760))
+(junction (pt 448 1280))
+(junction (pt 120 1208))
 (text "Etapa 1" (rect -88 416 297 545)(font "Intel Clear" (font_size 72)))
 (text "Etapa 2" (rect 1816 392 2201 521)(font "Intel Clear" (font_size 72)))
 (text "Etapa 3" (rect 3864 376 4249 505)(font "Intel Clear" (font_size 72)))
