@@ -16,7 +16,7 @@ architecture Behavioral of memoria_inst is
 	signal mem : memory;
 	
 	attribute ram_init_file : string;
-   attribute ram_init_file of mem : signal is "mem_prog2.mif";
+   attribute ram_init_file of mem : signal is "mem_prog.mif";
 	
 	
 	begin
